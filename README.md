@@ -60,7 +60,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
 5. Click on **Create Firewall**
   
 6. Set the firewall rules for incoming traffic.<br>
-   Allow SSH access from your machine by adding an inbound rule that allows traffic from the public IP address of your machine on port 22 and Nexus port 8081 and Nexus Docker adapter 8083 .
+   Allow SSH access from your machine by adding an inbound rule that allows traffic from the public IP address of your machine on port 22 and Nexus port 8081.
 
    <img src=""/>
    
