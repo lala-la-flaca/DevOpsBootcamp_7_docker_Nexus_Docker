@@ -51,7 +51,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
 
    e) Select **Create Droplet**
 
-3. Configuring Firewall on Digital Ocean: Following security best practices, configure the firewall's inbound and outbound rules. In this case, you only allow inbound SSH access from your machine to the Droplet and allowing access to Nexus port. restricting all other unnecessary connections.
+3. Configuring Firewall on Digital Ocean: Following security best practices, configure the firewall's inbound and outbound rules. In this case, you only allow inbound SSH access from your machine to the Droplet and access to Nexus port. restricting all other unnecessary connections.
 
 4. Select the **Networking** option from the left panel, then choose **Firewall**.
 
@@ -86,11 +86,13 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
 
    <img src="" width=800/>
 
-3. Navigate to GitHub and find the Offical Nexus Image
+3. Navigate to Docker Hub and find the Offical Nexus Image
+
+   [Docker Hub](https://hub.docker.com/r/sonatype/nexus)
 
    <img src="" width=800/>
    
-4. Set up a Docker Volume to store Nexus Data.
+5. Set up a Docker Volume to store Nexus Data.
 
    ```bash
    docker volume create --name nexus-data
@@ -98,7 +100,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
 
    <img src="" width=800/>
    
-5. Run the Nexus container using docker.
+6. Run the Nexus container using docker.
 
    ```bash
    docker run -d \
@@ -111,7 +113,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    <img src="" width=800/>
 
       
-6. Ensure that the Nexus container is running.
+7. Ensure that the Nexus container is running.
 
     ```bash
     docker ps
@@ -119,13 +121,13 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
 
     <img src="" width=800/>
 
-7. Open a web browser and navigate to the Nexus Repository URL.
+8. Open a web browser and navigate to the Nexus Repository URL.
 
     [Nexus repository](HTTP://64.227.16.46:8081)
 
     <img src="" width=800/>
     
-8. Validate the user by accessing the docker container.
+9. Validate the user by accessing the docker container.
 
     ```bash
     docker ps
@@ -136,7 +138,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
     <img src="" width=800/>
 
     
-9. Check persistent Data by navigating to the Nexus directory on the droplet. The docker inspect allows us to know the location of the data.
+10. Check persistent Data by navigating to the Nexus directory on the droplet. The docker inspect allows us to know the location of the data.
 
     ```bash
     docker volume ls
